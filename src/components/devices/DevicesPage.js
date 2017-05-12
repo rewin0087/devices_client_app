@@ -1,21 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
 import PropTypes from 'prop-types';
-import * as courseActions from '../../actions/deviceActions';
 import DeviceList from './DeviceList';
 
 class DevicesPage extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
       devices: Object.assign([], this.props.devices)
     }
   }
 
   componentWillReceiveProps(nextProps) {
-    // debugger
-    this.setState({devices: nextProps.devices});
+    this.setState({ devices: Object.assign([], nextProps.devices) });
   }
 
   render() {
@@ -49,10 +46,4 @@ function mapStateToProps(state, ownProps) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(courseActions, dispatch)
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(DevicesPage);
+export default connect(mapStateToProps)(DevicesPage);
