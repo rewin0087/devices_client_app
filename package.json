@@ -1,0 +1,28 @@
+{
+  "name": "devices_client_app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-bootstrap": "^0.31.0",
+    "prop-types": "15.5.9",
+    "react-dom": "^15.5.4",
+    "bootstrap": "^3.3.7",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.7.0",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "0.0.1",
+    "react-scripts": "0.9.5",
+    "redux-immutable-state-invariant": "1.2.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3003"
+}
