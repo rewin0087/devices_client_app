@@ -8,14 +8,14 @@ export default function deviceReducer(state = initialState.devices, action) {
       return Object.assign([], state, action.devices);
 
     case types.CREATE_DEVICE_SUCCESS:
-      browserHistory.push(`/devices/${action.device.i}`)
+      browserHistory.push(`/devices/${action.device.id}`);
       return [
         ...state.filter(device => device.id !== action.device.id),
         Object.assign({}, action.device)
       ];
 
     case types.UPDATE_DEVICE_SUCCESS:
-      browserHistory.push(`/devices/${action.device.i}`)
+      browserHistory.push(`/devices/${action.device.id}`)
       return [
         ...state.filter(device => device.id !== action.device.id),
         Object.assign({}, action.device)

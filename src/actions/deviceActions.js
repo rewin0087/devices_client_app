@@ -29,9 +29,9 @@ export function getAllDevices() {
 
 export function createDevice(device) {
   return function(dispatch) {
-    return deviceApi.createDevice(device).then(responseDevice => {
-      dispatch(createDeviceSuccess(responseDevice));
-      return responseDevice;
+    return deviceApi.createDevice(device).then(response => {
+      dispatch(createDeviceSuccess(response.device));
+      return response.device;
     }).catch(error => {
       throw(error);
     })
@@ -40,9 +40,9 @@ export function createDevice(device) {
 
 export function updateDevice(device) {
   return function(dispatch) {
-    return deviceApi.updateDevice(device).then(responseDevice => {
-      dispatch(updateDeviceSuccess(responseDevice));
-      return responseDevice;
+    return deviceApi.updateDevice(device).then(response => {
+      dispatch(updateDeviceSuccess(response.device));
+      return response.device;
     }).catch(error => {
       throw(error);
     })
@@ -51,9 +51,9 @@ export function updateDevice(device) {
 
 export function destroyDevice(device) {
   return function(dispatch) {
-    return deviceApi.destroyDevice(device).then(responseDevice => {
-      dispatch(destroyDeviceSuccess(responseDevice));
-      return responseDevice;
+    return deviceApi.destroyDevice(device).then(response => {
+      dispatch(destroyDeviceSuccess(response.device));
+      return response.device;
     }).catch(error => {
       throw(error);
     })
