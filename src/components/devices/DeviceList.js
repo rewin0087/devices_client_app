@@ -30,6 +30,6 @@ const DeviceList = ({devices}) => {
 
 DeviceList.propTypes = {
   devices: PropTypes.array.isRequired
-}
+};
 
 export default DeviceList;

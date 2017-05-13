@@ -29,7 +29,7 @@ class NewDevicePage extends React.Component {
     const field = event.target.name;
     const device = this.state.device;
     device[field] = event.target.value;
-    return this.setState({ device: device })
+    return this.setState({ device: device });
   }
 
   saveDevice(event) {
@@ -50,10 +50,10 @@ class NewDevicePage extends React.Component {
 
 NewDevicePage.propTypes = {
   actions: PropTypes.object.isRequired
-}
+};
 
 function mapStateToProps(state, ownProps) {
-  return { device: Object.assign({}, state.device) }
+  return { device: Object.assign({}, state.device) };
 }
 
 function mapDispatchToProps(dispatch) {

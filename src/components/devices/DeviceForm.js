@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router';
 
 class DeviceForm extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return(
       <div className='container'>

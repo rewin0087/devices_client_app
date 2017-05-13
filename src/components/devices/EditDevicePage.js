@@ -26,7 +26,7 @@ class EditDevicePage extends React.Component {
     const field = event.target.name;
     const device = this.state.device;
     device[field] = event.target.value;
-    return this.setState({ device: device })
+    return this.setState({ device: device });
   }
 
   saveDevice(event) {
@@ -48,16 +48,16 @@ class EditDevicePage extends React.Component {
 EditDevicePage.propTypes = {
   actions: PropTypes.object.isRequired,
   device: PropTypes.object.isRequired
-}
+};
 
 function getDeviceById(devices, id) {
-  let device = devices.find(device => device.id === id)
+  let device = devices.find(device => device.id === id);
   return Object.assign({}, device);
 }
 
 function mapStateToProps(state, ownProps) {
-  let id = ownProps.params.id !== undefined ? parseInt(ownProps.params.id, 10) : 0
-  let device = getDeviceById(state.devices, id)
+  let id = ownProps.params.id !== undefined ? parseInt(ownProps.params.id, 10) : 0;
+  let device = getDeviceById(state.devices, id);
   return {
     device: device
   };

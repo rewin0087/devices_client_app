@@ -16,7 +16,6 @@ class DevicePage extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    // debugger
     if(this.props.device.id !== nextProps.device.id) {
       this.setState({ device: Object.assign({}, nextProps.device) })
     }
@@ -34,7 +33,7 @@ class DevicePage extends React.Component {
           <div className='col-md-12'>
             <div className='panel panel-default'>
               <div className='panel-heading'>
-                <h3>{device.name}</h3>
+                <h3 className='panel-title'>{device.name}</h3>
               </div>
               <div className='panel-body'>
                 <div className='container'>
