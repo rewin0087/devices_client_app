@@ -16,7 +16,7 @@ class DevicePage extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if(this.props.device.id !== nextProps.device.id) {
+    if(this.props.device.id == nextProps.device.id) {
       this.setState({ device: Object.assign({}, nextProps.device) })
     }
   }
